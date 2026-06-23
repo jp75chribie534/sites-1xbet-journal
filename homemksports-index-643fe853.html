@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MK体育 · 场地与赛事信息服务</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #faf6f0;
+      color: #2c2b28;
+      font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+      line-height: 1.75;
+      padding: 2.5rem 1.5rem;
+    }
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fffcf9;
+      padding: 3rem 2.5rem;
+      border-radius: 3px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+      color: #2c3e2d;
+      border-left: 6px solid #a1876b;
+      padding-left: 1.2rem;
+    }
+    .subhead {
+      font-size: 1rem;
+      color: #9b8b7a;
+      border-bottom: 1px solid #e6dbd0;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .opening {
+      font-size: 1.15rem;
+      margin-bottom: 1.8rem;
+      background: #f4efe9;
+      padding: 1.2rem 1.8rem;
+      border-radius: 2px;
+      color: #3a3a35;
+      line-height: 1.8;
+    }
+    .opening strong {
+      color: #6d5f50;
+      font-weight: 600;
+    }
+    .intro-paragraph {
+      margin-bottom: 1.6rem;
+      text-indent: 0;
+    }
+    .intro-paragraph a {
+      color: #7a674d;
+      text-decoration: none;
+      border-bottom: 2px solid #dccfc0;
+      transition: border-color 0.2s;
+    }
+    .intro-paragraph a:hover {
+      border-bottom-color: #7a674d;
+    }
+    .feature-block {
+      margin: 2.4rem 0 2rem 0;
+      background: #f9f5ef;
+      padding: 1.8rem 2rem 1.8rem 2.2rem;
+      border-left: 5px solid #b7a186;
+    }
+    .feature-block h2 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 1.2rem;
+      color: #3b4a38;
+      letter-spacing: 0.5px;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+    .feature-list li {
+      padding: 0.45rem 0 0.45rem 1.8rem;
+      position: relative;
+      line-height: 1.7;
+      color: #3f3c38;
+    }
+    .feature-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0.2rem;
+      color: #a1876b;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+    .quote-box {
+      background: #ede6dc;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0 1.8rem 0;
+      border-radius: 2px;
+      font-style: normal;
+      border: 1px solid #ddd3c5;
+      color: #44423d;
+    }
+    .quote-box p {
+      margin-bottom: 0.3rem;
+    }
+    .quote-box .source {
+      text-align: right;
+      font-size: 0.9rem;
+      color: #7d7163;
+      margin-top: 0.6rem;
+    }
+    .closing {
+      margin-top: 2.2rem;
+      padding-top: 1.6rem;
+      border-top: 1px solid #e3d8cc;
+      font-size: 0.95rem;
+      color: #5f554a;
+      line-height: 1.7;
+    }
+    .faq-note {
+      background: #fcf8f3;
+      border: 1px dashed #cdbcab;
+      padding: 1rem 1.8rem;
+      margin: 2rem 0 1rem 0;
+      font-size: 0.95rem;
+      border-radius: 2px;
+    }
+    .faq-note strong {
+      color: #5d4e3d;
+      font-weight: 600;
+    }
+    @media (max-width: 580px) {
+      body { padding: 1.2rem 0.8rem; }
+      .page { padding: 1.8rem 1.2rem; }
+      h1 { font-size: 1.8rem; padding-left: 0.8rem; }
+      .opening { padding: 1rem; }
+      .feature-block { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <h1>MK体育</h1>
+  <div class="subhead">场地资讯 · 赛事动态 · 运动服务</div>
+
+  <div class="opening">
+    <strong>打开页面，三秒判断用途。</strong> 这不是门户首页，而是一个信息集中、结构清晰的站点——<a href="https://homemksports.com">MK体育</a> 将体育场景所需的关键信息分层组织，减少用户在多个标签页之间反复跳转的消耗。
+  </div>
+
+  <div class="intro-paragraph">
+    从社区球场预定到业余联赛赛程，从运动康复知识到本地俱乐部动态，<a href="https://homemksports.com">MK体育</a> 尝试把分散的体育服务整合到同一入口。没有复杂的导航迷宫，没有浮夸的弹窗引导，信息组织基于真实使用场景：你需要什么，就按功能模块直达。对于初次接触的用户，首页即说明书。
+  </div>
+
+  <div class="feature-block">
+    <h2>三层信息结构，降低识别成本</h2>
+    <ul class="feature-list">
+      <li><strong>场地与日程</strong> — 按区县列出合作场馆，实时显示空闲时段与价格，支持一键复制地址。</li>
+      <li><strong>赛事与报名</strong> — 公开杯赛、企业联赛、趣味运动会，赛程表与报名状态同步更新。</li>
+      <li><strong>运动生活</strong> — 精简的科普短文、热身指导、常见运动损伤预防，内容由合作教练供稿。</li>
+    </ul>
+  </div>
+
+  <div class="quote-box">
+    <p>“以前找场地要加三四个群，翻半天聊天记录。MK 体育把场地、赛程和基础指导放一起，省掉很多中间步骤。” —— 某业余篮球俱乐部领队</p>
+    <div class="source">—— 用户反馈摘录，2025</div>
+  </div>
+
+  <div class="intro-paragraph">
+    信息密度并不等于拥挤。<a href="https://homemksports.com">MK体育</a> 在排版上采用克制的中性字体、适度留白与区块分割，每一屏突出一个核心动作。无论是寻找周末羽毛球场地，还是查看下月即将截止报名的五人制足球赛，你都能在两次点击内定位到有效信息。
+  </div>
+
+  <div class="faq-note">
+    <strong>常见疑问摘要</strong><br>
+    · 是否需要注册才能浏览场地信息？&nbsp; 大部分场馆列表与价格无需登录即可查看。<br>
+    · 赛事报名是否支持团体提交？&nbsp; 页面内提供团体报名入口与人数上限说明。<br>
+    · 内容更新频率？&nbsp; 场地信息每周同步，赛事专题每轮结束后48小时内更新。
+  </div>
+
+  <div class="closing">
+    如果你希望快速判断一个体育网站是否值得花时间探索，不妨从结构是否直白、信息是否实用两个角度衡量。<a href="https://homemksports.com">MK体育</a> 的设计初衷正是如此：让访问者少琢磨，多行动。页面虽简，但每个模块都对应真实体育场景中的一次决策。
+  </div>
+</div>
+</body>
+</html>
