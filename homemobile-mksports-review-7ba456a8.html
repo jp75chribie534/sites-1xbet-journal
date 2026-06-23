@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>日常动向 · MK体育 专题介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f0f2f5;
+            color: #2a2a2e;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .wrap {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        /* 首页横幅 —— 杂志式通栏 */
+        .hero {
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            border-radius: 28px;
+            padding: 3.2rem 2.5rem 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+            border: 1px solid #e6e9ed;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 350;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: #1e1e24;
+        }
+
+        .hero h1 span {
+            display: inline-block;
+            background: #f5f7fa;
+            padding: 0 0.4rem;
+            border-radius: 6px;
+            font-weight: 450;
+        }
+
+        .hero .sub {
+            margin-top: 1.2rem;
+            font-size: 1.15rem;
+            color: #4a4a54;
+            max-width: 80%;
+            border-left: 4px solid #b0b8c4;
+            padding-left: 1.2rem;
+        }
+
+        /* 背景说明卡 */
+        .bg-card {
+            background: #ffffff;
+            border: 1px solid #e2e6ec;
+            border-radius: 24px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        .bg-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .bg-card h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-bottom: 0.9rem;
+            color: #272930;
+            letter-spacing: -0.3px;
+        }
+
+        .bg-card p {
+            color: #3b3d44;
+            margin-bottom: 0.8rem;
+        }
+
+        .bg-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 三段介绍 —— 三列杂志网格 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+            margin: 2.8rem 0 2rem;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            border: 1px solid #e2e6ec;
+            border-radius: 24px;
+            padding: 1.8rem 1.6rem 2rem;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.02);
+            transition: transform 0.15s ease, box-shadow 0.2s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+        }
+
+        .feature-item h3 {
+            font-size: 1.3rem;
+            font-weight: 440;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eaedf2;
+            color: #22252b;
+            letter-spacing: -0.2px;
+        }
+
+        .feature-item p {
+            color: #3f424a;
+            font-size: 0.98rem;
+        }
+
+        .feature-item .tag {
+            display: inline-block;
+            margin-top: 1rem;
+            background: #f3f5f9;
+            padding: 0.2rem 1rem;
+            border-radius: 36px;
+            font-size: 0.85rem;
+            color: #4d515b;
+            border: 1px solid #dadfe6;
+        }
+
+        /* 页尾访问提示 */
+        .footer-note {
+            margin-top: 3rem;
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2.4rem 2.2rem;
+            border: 1px solid #e2e6ec;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-note .text {
+            flex: 2;
+            min-width: 220px;
+        }
+
+        .footer-note .text p {
+            font-size: 1.05rem;
+            color: #363940;
+            margin-bottom: 0.2rem;
+        }
+
+        .footer-note .link-area {
+            flex: 1;
+            text-align: right;
+            min-width: 140px;
+            margin-top: 0.5rem;
+        }
+
+        .footer-note .link-area a {
+            display: inline-block;
+            background: #f3f6fc;
+            padding: 0.6rem 2rem;
+            border-radius: 100px;
+            font-weight: 460;
+            font-size: 1.2rem;
+            color: #1c2a3c;
+            text-decoration: none;
+            border: 1px solid #cdd4de;
+            transition: background 0.15s, border 0.15s;
+            letter-spacing: 0.3px;
+        }
+
+        .footer-note .link-area a:hover {
+            background: #e9eef5;
+            border-color: #a9b4c4;
+        }
+
+        .footer-note .small-note {
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            color: #60646e;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #dcdfe5;
+            margin: 1.2rem 0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 760px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .hero {
+                padding: 2rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                line-height: 1.3;
+            }
+
+            .hero .sub {
+                max-width: 100%;
+                font-size: 1rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+
+            .bg-card {
+                padding: 1.6rem 1.4rem;
+            }
+
+            .footer-note {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                padding: 1.8rem 1.5rem;
+            }
+
+            .footer-note .link-area {
+                text-align: left;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .feature-item h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+    <!-- 首页横幅 hero -->
+    <div class="hero">
+        <h1>日常查询 &amp; 对照·<br><span>MK体育</span> 专题</h1>
+        <div class="sub">从生活阅读出发，把信息梳理成顺手可用的参考 —— 一份围绕运动与观察的轻专题。</div>
+    </div>
+
+    <!-- 背景说明卡片 -->
+    <div class="bg-card">
+        <h2>背景 · 为什么会有这个页面</h2>
+        <p>平时浏览信息时，总会遇到需要对照规则、快速查阅术语或赛事背景的时刻。比起零散的搜索，把相关线索集中在一个页面能节省不少翻找的时间。</p>
+        <p>本站的定位并非资讯的堆叠，而是提供一条相对清晰的路径：当你想要了解某一类运动项目的常见概念，或者翻看近期动态时，可以把这个地址当作一个起点。无论是周末翻手机还是工作间隙扫一眼，卡片式的内容会更容易定位。</p>
+        <p style="margin-top: 0.6rem; color: #4c505a;"><span style="background: #eff1f4; padding: 0.1rem 0.6rem; border-radius: 14px;">📌 延伸阅读</span> 同时也在探索一种更安静的浏览体验 —— 不滚动过长的列表，每个卡片讲一个具体的小场景。</p>
+    </div>
+
+    <!-- 三段自然介绍：杂志网格 -->
+    <div class="feature-grid">
+        <div class="feature-item">
+            <h3>对照·规则简述</h3>
+            <p>很多赛事项目的计分方式、时间限定以及晋级逻辑往往在几页之间来回变动。这里将常见项目的关键条目做了精简对照，方便你在讨论或查看时快速定位差异点，不必每次都从头翻找完整的规则书。</p>
+            <div class="tag">常用参考</div>
+        </div>
+        <div class="feature-item">
+            <h3>场景·日常延伸</h3>
+            <p>从朋友间的闲聊热身，到通勤途中听一段赛事回顾，运动的影子经常出现在生活间隙。这个页面会整理那些容易被忽略的细节：比如某个术语的历史由来，或者不同地区对同一项运动的叫法差异，读起来并不枯燥。</p>
+            <div class="tag">生活视角</div>
+        </div>
+        <div class="feature-item">
+            <h3>检索·信息习惯</h3>
+            <p>在信息更迭加快的节奏下，相比漫无目的地看推送，建立一个轻量的查询习惯更有效率。这里收集了一些经过筛选的背景条目，你可以把它当作一个延伸阅读的中转站 —— 既不冗长，又保留了进一步探索的线索。</p>
+            <div class="tag">轻量化</div>
+        </div>
+    </div>
+
+    <!-- 额外一段自然补充（保持内容层次） -->
+    <div class="bg-card" style="margin-top: -0.2rem;">
+        <p style="font-size: 1rem;"><span style="background: #f2f4f8; padding: 0.1rem 0.6rem; border-radius: 14px;">🧩 延伸阅读摘要</span> 如果你在某个周末想了解一项运动的发展背景，或者想在日常中对比不同赛季的记录变动，这个专题页可以作为你随手翻开的第一层。内容围绕真实的阅读场景展开，不堆砌术语，也不做结论性的引导，只是把信息整理得更容易被看到。</p>
+        <p style="margin-top: 0.6rem;">偶尔，页面中会加入短小的FAQ条目，解释那些经常被问到的规则差异或常见误解。例如：某项计分为什么在不同赛事中有不同的执行方式？这些内容都力求在有限的篇幅里提供清晰的轮廓。</p>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+        <div class="text">
+            <p>你可以把这里的记录当作一个日常参考的角落，如果需要进一步了解完整的信息源，可以前去浏览 <a href="https://homemobile-mksports.com" style="color: #1f2a3c; text-decoration: underline; text-underline-offset: 3px; font-weight: 450;">MK体育</a> 的主站内容，那里保留了更全面的动态与背景。</p>
+            <div class="small-note">专题页面保持独立，仅用作日常对照与延伸阅读。</div>
+        </div>
+        <div class="link-area">
+            <a href="https://homemobile-mksports.com">MK体育</a>
+        </div>
+    </div>
+
+    <!-- 极简分隔，无额外文字 -->
+    <hr style="margin-top: 2.5rem;">
+
+</div>
+</body>
+</html>
